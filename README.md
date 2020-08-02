@@ -1,5 +1,9 @@
-## Techflix: webpage agregador de conteúdo
+> <h1><b>Techflix: webpage agregador de conteúdo</b></h1>
+<br />
 
+><h3><font color="lime">Em estágio de desenvolvimento...</font></h3>
+
+<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
