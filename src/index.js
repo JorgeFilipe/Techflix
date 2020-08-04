@@ -16,8 +16,9 @@ function CadastroVideo() {
 ReactDOM.render(
   <BrowserRouter>
   <Switch>
+    <Route path="/" component={App} exact />
     <Route path="/cadastro/video" component={CadastroVideo} />
-    <Route path="/" component={App} />
+    <Route component={() => (<div>404 Error</div>)} />
   </Switch>
   </BrowserRouter>,
   document.getElementById('root')

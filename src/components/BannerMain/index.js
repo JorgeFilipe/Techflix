@@ -27,7 +27,7 @@ export default function BannerMain({
           </ContentAreaContainer.Title>
 
           <ContentAreaContainer.Description>
-            {videoDescription}
+            {videoDescription="Você está pensando em ser um Programador e não sabe por onde começar? Acesse o canal Curso em Vídeo e assista a este vídeo."}
           </ContentAreaContainer.Description>
         </ContentAreaContainer.Item>
 
