@@ -13,6 +13,9 @@ export const ContentAreaContainer = styled.section`
     padding-top: 100px;
     flex-direction: column;
   }
+  a {
+    text-decoration:none;
+  }
 `;
 
 ContentAreaContainer.Item = styled.div`
@@ -21,6 +24,9 @@ ContentAreaContainer.Item = styled.div`
   margin-bottom: 50px;
   @media (max-width: 800px) {
     width: 100%;
+  }
+  a {
+    text-decoration:none;
   }
 `;
 
@@ -43,11 +49,17 @@ ContentAreaContainer.Category = styled.h1`
     font-size: 18px;
     padding: 10px;
   }
+  a {
+    text-decoration:none;
+  }
 `;
 
 ContentAreaContainer.Description = styled.p`
   @media (max-width: 800px) {
     display: none;
+  }
+  a {
+    text-decoration:none;
   }
 `;
 
@@ -63,6 +75,9 @@ ContentAreaContainer.Title = styled.h2`
   @media (max-width: 800px) {
     font-size: 32px;
     text-align: center;
+  }
+  a {
+    text-decoration:none;
   }
 `;
 
@@ -99,10 +114,14 @@ export const BannerMainContainer = styled.section`
     bottom: 0;
     background: linear-gradient(0deg, #141414 0%, transparent 100%);
   }
+
+  a {
+    text-decoration:none;
+  }
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   box-sizing: border-box;
   cursor: pointer;
   padding: 16px 24px;
@@ -114,13 +133,16 @@ export const WatchButton = styled.button`
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
-  color: var(--black);
-  background: var(--white);
-  border-color: var(--black);
+  color: var(--letras);
+  background: var(--fundo);
+  border-color: var(--bordaMenu);
   transition: opacity .3s;
   display: none;
   margin: 0 auto;
   @media (max-width: 800px) {
     display: block;
+  }
+  a {
+    text-decoration:none;
   }
 `;
