@@ -1,4 +1,4 @@
-> <h1><b>Techflix: webpage agregador de conteúdo de técnologia</b></h1>
+> <h1><b>Techflix: webpage agregador de conteúdo de tecnologia</b></h1>
 <br />
 
 ><h3><font color="lime">Em estágio de desenvolvimento...</font></h3>
