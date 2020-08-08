@@ -1,0 +1,17 @@
+input {
+    color: var(--fundo);
+}
+
+button {
+    color: var(--fundo);
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-color: var(--bordaMenu);
+    transition: opacity .3s;
+    background: var(--letras);
+}
