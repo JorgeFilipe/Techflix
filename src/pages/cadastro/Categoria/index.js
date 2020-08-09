@@ -5,15 +5,24 @@ import './index.css';
 
 function CadastroCategoria() {
     const [categorias, setCategorias] = useState(['Teste']);
-    const [nomeDaCategoria, setNomeDaCategoria] = useState('Filmes');
+
+    const valoresIniciais = {
+        nome:'Categoria Ini',
+        descricao:'Descrição Ini',
+        cor:'#00b9e7',
+    }
+
+    const [values, setValues] = useState(valoresIniciais);
+
     return (
         <PageDefault>
-            <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
-            <form onSubmit={function handleSubmit(infosDoEvento) {
+            <h1>Cadastro de Categoria: {values.nome}</h1>
+
+            <form /*style={{ background: nomeDaCategoria}}*/ onSubmit={function handleSubmit(infosDoEvento) {
                 infosDoEvento.preventDefault();
                 setCategorias([
                     ...categorias,
-                    nomeDaCategoria
+                    values
                 ]);
             }}>
                 <div>
@@ -21,10 +30,10 @@ function CadastroCategoria() {
                         Nome da Categoria:
                         <input
                             type="text"
-                            value={nomeDaCategoria}
+                            value={values.nome}
                             onChange={
                                 function funcaoHandler(infosDoEvento) {
-                                    setNomeDaCategoria(infosDoEvento.target.value);
+                                    //setNomeDaCategoria(infosDoEvento.target.value);
                                 }
                             }
                         />
@@ -36,10 +45,10 @@ function CadastroCategoria() {
                         Descrição:
                         <textarea
                             type="text"
-                            value={nomeDaCategoria}
+                            value={values.descricao}
                             onChange={
                                 function funcaoHandler(infosDoEvento) {
-                                    setNomeDaCategoria(infosDoEvento.target.value);
+                                    //setNomeDaCategoria(infosDoEvento.target.value);
                                 }
                             }
                         />
@@ -49,10 +58,10 @@ function CadastroCategoria() {
                         Cor:
                         <input
                             type="color"
-                            value={nomeDaCategoria}
+                            value={values.cor}
                             onChange={
                                 function funcaoHandler(infosDoEvento) {
-                                    setNomeDaCategoria(infosDoEvento.target.value);
+                                    //setNomeDaCategoria(infosDoEvento.target.value);
                                 }
                             }
                         />
