@@ -4,26 +4,42 @@ import { Link } from 'react-router-dom';
 import './index.css';
 
 function CadastroCategoria() {
-    const [categorias, setCategorias] = useState(['Teste']);
-
     const valoresIniciais = {
-        nome:'Categoria Ini',
-        descricao:'Descrição Ini',
-        cor:'#00b9e7',
+        nome: 'Categoria Ini',
+        descricao: 'Descrição Ini',
+        cor: '#00b9e7',
+    }
+    const [categorias, setCategorias] = useState([]);
+    const [values, setValues] = useState(valoresIniciais);
+
+
+
+    function setValue(chave, valor) {
+        setValues({
+            ...values,
+            [chave]: valor,
+        })
     }
 
-    const [values, setValues] = useState(valoresIniciais);
+    function handleChange(infosDoEvento) {
+        setValue(
+            infosDoEvento.target.getAttribute('name'),
+            infosDoEvento.target.value
+        );
+    }
 
     return (
         <PageDefault>
-            <h1>Cadastro de Categoria: {values.nome}</h1>
+            <h1 >Cadastro de Categoria: {values.nome}</h1>
 
-            <form /*style={{ background: nomeDaCategoria}}*/ onSubmit={function handleSubmit(infosDoEvento) {
+            <form onSubmit={function handleSubmit(infosDoEvento) {
                 infosDoEvento.preventDefault();
                 setCategorias([
                     ...categorias,
                     values
                 ]);
+
+                setValues(va)
             }}>
                 <div>
                     <label>
@@ -31,11 +47,8 @@ function CadastroCategoria() {
                         <input
                             type="text"
                             value={values.nome}
-                            onChange={
-                                function funcaoHandler(infosDoEvento) {
-                                    //setNomeDaCategoria(infosDoEvento.target.value);
-                                }
-                            }
+                            name="nome"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -46,30 +59,24 @@ function CadastroCategoria() {
                         <textarea
                             type="text"
                             value={values.descricao}
-                            onChange={
-                                function funcaoHandler(infosDoEvento) {
-                                    //setNomeDaCategoria(infosDoEvento.target.value);
-                                }
-                            }
+                            name="descricao"
+                            onChange={handleChange}
                         />
                     </label>
-                    
+
                     <label>
                         Cor:
                         <input
                             type="color"
                             value={values.cor}
-                            onChange={
-                                function funcaoHandler(infosDoEvento) {
-                                    //setNomeDaCategoria(infosDoEvento.target.value);
-                                }
-                            }
+                            name="cor"
+                            onChange={handleChange}
                         />
                     </label>
                 </div>
                 <button>
                     Cadastrar
-                            </button>
+                </button>
 
             </form>
 
@@ -77,7 +84,7 @@ function CadastroCategoria() {
                 {categorias.map((categoria, indice) => {
                     return (
                         <li key={`${categoria}${indice}`}>
-                            {categoria}
+                            {categoria.nome}
                         </li>
                     )
                 })

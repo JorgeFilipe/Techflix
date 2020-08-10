@@ -1,4 +1,4 @@
-input {
+input, textarea {
     color: var(--fundo);
 }
 
