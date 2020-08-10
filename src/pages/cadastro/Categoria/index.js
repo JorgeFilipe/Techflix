@@ -22,9 +22,10 @@ function CadastroCategoria() {
     }
 
     function handleChange(infosDoEvento) {
+        const { getAttribute, value } = infosDoEvento.target;
         setValue(
-            infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value
+            getAttribute('name'),
+            value
         );
     }
 
@@ -41,18 +42,7 @@ function CadastroCategoria() {
 
                 setValues(valoresIniciais)
             }}>
-                <div>
-                    <label>
-                        Nome da Categoria:
-                        <input
-                            type="text"
-                            value={values.nome}
-                            name="nome"
-                            onChange={handleChange}
-
-                        />
-                    </label>
-                </div>
+                <FormField />
 
                 <div>
                     <label>
@@ -65,7 +55,7 @@ function CadastroCategoria() {
                         />
                     </label>
                 </div>
-                
+
                 <div>
                     <label>
                         Cor:
