@@ -5,12 +5,14 @@ import './index.css';
 
 function CadastroCategoria() {
     const valoresIniciais = {
-        nome: 'Categoria Ini',
-        descricao: 'Descrição Ini',
-        cor: '#00b9e7',
+        nome: '',
+        descricao: '',
+        cor: '',
     }
     const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
+
+
 
     function setValue(chave, valor) {
         setValues({
@@ -37,7 +39,7 @@ function CadastroCategoria() {
                     values
                 ]);
 
-                setValues(va)
+                setValues(valoresIniciais)
             }}>
                 <div>
                     <label>
@@ -47,6 +49,7 @@ function CadastroCategoria() {
                             value={values.nome}
                             name="nome"
                             onChange={handleChange}
+
                         />
                     </label>
                 </div>
@@ -61,7 +64,9 @@ function CadastroCategoria() {
                             onChange={handleChange}
                         />
                     </label>
-
+                </div>
+                
+                <div>
                     <label>
                         Cor:
                         <input
