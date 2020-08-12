@@ -42,45 +42,30 @@ function CadastroCategoria() {
 
                 setValues(valoresIniciais)
             }}>
-                <FormField 
-                    label="Nome da Categoria:"
+                <FormField
+                    label="Nome da Categoria"
                     type="text"
                     name="nome"
                     value={values.nome}
                     onChange={handleChange}
                 />
 
-                <div>
-                    <label>
-                        Descrição:
-                        <textarea
-                            type="text"
-                            value={values.descricao}
-                            name="descricao"
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>
+                <FormField
+                    label="Descrição"
+                    type="text"
+                    name="descricao"
+                    value={values.descricao}
+                    onChange={handleChange}
+                />
 
-                <FormField 
-                    label="Cor:"
+                <FormField
+                    label="Cor"
                     type="color"
                     name="cor"
                     value={values.cor}
                     onChange={handleChange}
                 />
 
-                {/*<div>
-                    <label>
-                        Cor:
-                        <input
-                            type="color"
-                            value={values.cor}
-                            name="cor"
-                            onChange={handleChange}
-                        />
-                    </label>
-                </div>*/}
                 <button>
                     Cadastrar
                 </button>
