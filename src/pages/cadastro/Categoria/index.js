@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import './index.css';
+import FormField from '../../../components/FormField';
 
 function CadastroCategoria() {
     const valoresIniciais = {
@@ -9,10 +10,9 @@ function CadastroCategoria() {
         descricao: '',
         cor: '',
     }
+
     const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
-
-
 
     function setValue(chave, valor) {
         setValues({
@@ -24,8 +24,8 @@ function CadastroCategoria() {
     function handleChange(infosDoEvento) {
         const { getAttribute, value } = infosDoEvento.target;
         setValue(
-            getAttribute('name'),
-            value
+            infosDoEvento.target.getAttribute('name'),
+            infosDoEvento.target.value
         );
     }
 
@@ -42,7 +42,13 @@ function CadastroCategoria() {
 
                 setValues(valoresIniciais)
             }}>
-                <FormField />
+                <FormField 
+                    label="Nome da Categoria:"
+                    type="text"
+                    name="nome"
+                    value={values.nome}
+                    onChange={handleChange}
+                />
 
                 <div>
                     <label>
@@ -56,7 +62,15 @@ function CadastroCategoria() {
                     </label>
                 </div>
 
-                <div>
+                <FormField 
+                    label="Cor:"
+                    type="color"
+                    name="cor"
+                    value={values.cor}
+                    onChange={handleChange}
+                />
+
+                {/*<div>
                     <label>
                         Cor:
                         <input
@@ -66,7 +80,7 @@ function CadastroCategoria() {
                             onChange={handleChange}
                         />
                     </label>
-                </div>
+                </div>*/}
                 <button>
                     Cadastrar
                 </button>
