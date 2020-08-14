@@ -10,7 +10,6 @@ function FormField({ label, type, name, value, onChange }) {
                     value={value}
                     name={name}
                     onChange={onChange}
-
                 />
             </label>
         </div>
