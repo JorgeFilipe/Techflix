@@ -1,4 +1,4 @@
-> <h1><b>Techflix: webpage agregador de conteúdo de tecnologia</b></h1>
+> <h1><b>Techflix: webpage agregador de conteúdo de tecnologia</b></h>z
 <br />
 
 ><h3><font color="lime">Em estágio de desenvolvimento...</font></h3>
@@ -68,7 +68,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Pode ver no ar em: https://techflix-zeta.vercel.app
 
 ### `npm run build` fails to minify
 
